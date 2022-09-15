@@ -71,7 +71,7 @@
                             <TextBlock Width="260" Height="84" x:Name="details_txtB"></TextBlock>
                         </StackPanel>
 
-                        <Button Padding="10" Margin="5,40,5,0" Width="140" Background="LightGreen" Click="Button_Add_Click">
+                        <Button Padding="10" Margin="5,40,5,0" Width="140" Background="Orange" Click="Button_Add_Click">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="./image/plus.png" Height="15" />
                                 <Label>Artikel hinzufügen</Label>
