@@ -13,7 +13,8 @@ namespace ItemList
         Box,
         Piece,
         Palette,
-        Kg
+        Kg,
+        Hours
     }
     public class Item
     {
