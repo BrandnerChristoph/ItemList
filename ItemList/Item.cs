@@ -13,6 +13,7 @@ namespace ItemList
         Box,
         Piece,
         Palette,
+        Kg
     }
     public class Item
     {
@@ -29,7 +30,6 @@ namespace ItemList
 
         public Item(string name = "", string details = "", double amount = 0, int quantity = 0, Unit unit = Unit.Piece)
         {
-            Id = 
             Name = name;
             Details = details;
             Amount = amount;
