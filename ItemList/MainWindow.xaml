@@ -5,8 +5,82 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ItemList"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Shopping List" Height="480" Width="810"
+        ResizeMode="NoResize">
+    <StackPanel Orientation="Vertical">
+        <!-- Menu START -->
+            <DockPanel>
+                <Menu DockPanel.Dock="Top">
+                    <MenuItem Header="_Datei">
+                        <MenuItem Header="_Info" Click="MenuItem_Info_Click"/>
+                        <Separator />
+                        <MenuItem Header="_Beenden" Click="MenuItem_Close_Click"/>
+                    </MenuItem>
+                </Menu>
+            </DockPanel>
+        <!-- Menu ENDE -->
+        
+        <Label FontSize="18" HorizontalContentAlignment="Center">Shopping List</Label>
+        
+        <StackPanel Orientation="Horizontal">
+            <StackPanel>
+                <ListBox Width="400" Height="300" Margin="10" x:Name="items_lB">
+                </ListBox>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Padding="10" Margin="5" Width="120" Background="Red" Click="Button_ItemDelete_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./image/trash.png" Height="15" />
+                            <Label>Element enternen</Label>
+                        </StackPanel>
+                    </Button>
+                    <Button Padding="10" Margin="5" Width="120" Background="LightBlue" Click="Button_ItemUpdate_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="./image/trash.png" Height="15"/>
+                            <Label>Element updaten</Label>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
 
-    </Grid>
+            <StackPanel>
+                <GroupBox Header="Artikel hinzufügen">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Width="90">Name</Label>
+                            <TextBox Width="260" x:Name="name_txtB"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Width="90">Menge</Label>
+                            <TextBox Width="120" x:Name="quant_txtB"></TextBox>
+                            <ComboBox Width="140">
+                                <ComboBoxItem >Karton</ComboBoxItem>
+                                <ComboBoxItem >kg</ComboBoxItem>
+                                <ComboBoxItem >Palette</ComboBoxItem>
+                                <ComboBoxItem >Stück</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Width="90">Kosten</Label>
+                            <TextBox Width="260" x:Name="amount_txtB"></TextBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <Label Width="90">Details</Label>
+                            <TextBlock Width="260" Height="84" x:Name="details_txtB"></TextBlock>
+                        </StackPanel>
+
+                        <Button Padding="10" Margin="5,40,5,0" Width="140" Background="LightGreen" Click="Button_Add_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="./image/plus.png" Height="15" />
+                                <Label>Artikel hinzufügen</Label>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </StackPanel>
+
+    </StackPanel>
 </Window>
