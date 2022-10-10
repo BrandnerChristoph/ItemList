@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="image\plus.png" />
+    <None Remove="image\trash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="image\plus.png" />
+    <EmbeddedResource Include="image\trash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="data\" />
     <Folder Include="doku\" />
   </ItemGroup>

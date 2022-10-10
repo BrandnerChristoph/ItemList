@@ -46,7 +46,7 @@ namespace ItemList
                                     int.Parse(quant_txtB.Text.ToString())
                                 );
 
-                //list.Items.Add(i);
+                list.Items.Add(i);
                 //items_lB.Items.Add(i.Name + "(" + i.Quantity.ToString() + ")");
                 items_lB.Items.Add(i);
                 this.SaveList();
